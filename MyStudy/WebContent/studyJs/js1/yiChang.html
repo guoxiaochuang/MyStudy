@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>异常捕获</title>
+</head>
+<body>
+<h2>异常捕获</h2>
+<input type='text' id='txt'>
+<button onclick="f1()">验证</button>
+<script>
+	function f1(){
+		try{
+			var str = document.getElementById('txt');
+			if(str.value == ""){
+				throw "请输入";
+			}
+		}catch(err){
+			alert(err);
+		}
+	}
+	function demo(){
+		try{
+			alert(str);
+		}catch(err){
+			alert(err);
+		}
+	}
+	//demo();
+</script>
+</body>
+</html>

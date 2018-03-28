@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>带返回值的函数</title>
+</head>
+<body>
+<h2>带返回值的函数</h2>
+<p id="pid1"></p>
+<script>
+	function demo(a,b){
+		if(a>b){
+			return 'a比较大';
+		} else {
+			return 'b比较大';
+		}
+	}
+	var a = demo(1,2);
+	document.getElementById("pid1").innerHTML = a;
+</script>
+</body>
+</html>

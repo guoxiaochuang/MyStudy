@@ -1,0 +1,40 @@
+uiXiangMath.html<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JS Array对象</title>
+</head>
+<h2>JS Array对象</h2>
+<hr>
+<script type="text/javascript">
+var a = [4,5,6];
+var b = [1,2,3];
+var c = a.concat(b);
+document.write(c);
+document.write("<br/>升序<br/>");
+document.write(c.sort());//升序
+document.write("<br/>降序<br/>");
+document.write(c.sort(function(a,b){//降序
+	return b-a;//从b到a
+}));
+
+document.write("<hr>");
+document.write("push添加元素：<br/>");
+var a = ["a","b"];
+document.write(a);
+a.push("c");
+document.write("<br/>");
+document.write(a);
+
+document.write("<hr>");
+document.write("reverse，反转元素：<br/>");
+var a = ["a","b","d","c"];
+document.write(a);
+document.write("<br/>");
+a = a.reverse();
+document.write(a);
+
+document.write("<hr>");
+</script>
+</body>
+</html>

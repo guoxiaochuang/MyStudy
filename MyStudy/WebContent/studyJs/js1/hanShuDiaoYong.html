@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>函数调用</title>
+</head>
+<script>
+function demo(){
+	var n = 10;
+	var m = 10;
+	var sum = n+m;
+	alert(sum);
+}
+//demo();//调用函数，<script>内调用
+</script>
+<body>
+<h2>函数调用</h2>
+<button onclick="demo()">提交</button>
+<form>
+	<input type='button' value="提交" onclick="demo()"></input><!-- 调用函数，html调用 -->
+</form>
+</body>
+</html>

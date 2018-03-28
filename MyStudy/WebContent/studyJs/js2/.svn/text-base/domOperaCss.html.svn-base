@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>DOM操作CSS样式</title>
+<link rel="stylesheet" type="text/css" href="../../css/domOperaCss.css">
+</head>
+<body>
+<h2>DOM操作CSS样式</h2>
+<div id='div1' class='div'>
+	Hello
+</div>
+<button onclick="f1()">按钮</button>
+<br/>
+<h3>句柄,addEventListener,removeEventListener</h3>
+<p id="p1">Hello</p>
+<button id="btn" >按钮</button>
+<hr>
+<p>该实例使用 addEventListener() 方法来向按钮添加点击事件。</p>
+<button id="myBtn">点我</button>
+<p id="demo"></p>
+<hr>
+<button id="btn2" >按钮</button>
+<script>
+	var obj = document.getElementById("btn"); 
+	obj.addEventListener("click",function(){
+			alert("Hello");
+	});
+	function f1(){
+		document.getElementById("div1").style.background = 'red';
+	}
+	
+	document.getElementById("myBtn").addEventListener("click", function(){
+	    document.getElementById("demo").innerHTML = "Hello World";
+	});
+	
+	document.getElementById("btn2").addEventListener("click", hello);
+	document.getElementById("btn2").addEventListener("click", world);
+	document.getElementById("btn2").removeEventListener("click", world);
+	function hello(){
+		alert("Hello");
+	}
+	function world(){
+		alert("World");
+	}
+</script>
+</body>
+</html>

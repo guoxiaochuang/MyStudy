@@ -1,0 +1,9 @@
+#pid{
+	color:red;
+}
+#pid a{
+	color:yellow;
+}
+#divid{
+	color:blue;
+}

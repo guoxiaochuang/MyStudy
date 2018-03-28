@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>事件处理</title>
+</head>
+<body>
+<h2>事件处理</h2>
+DOM 0 级事件处理程序：
+<button id="btn1">点我</button><br/>
+DOM 2 级事件处理程序：
+<button id="btn2">点我</button>
+<script>
+	var btn = document.getElementById("btn1");//0级事件会覆盖前一个事件
+	btn.onclick = function(){
+		alert('hello，DOM 0 级事件处理程序1');
+	}
+	btn.onclick = function(){
+		alert('hello，DOM 0 级事件处理程序2');
+	}
+	var btn2 = document.getElementById("btn2");//2级事件不会覆盖前一个事件
+	btn2.addEventListener("click",f1);
+	btn2.addEventListener("click",f2);
+	btn2.addEventListener("click",f3);
+	function f1(){
+		alert("hello DOM 2 级事件处理程序1")
+	}
+	function f2(){
+		alert("hello DOM 2 级事件处理程序2")
+	}
+	function f3(){
+		alert("hello DOM 2 级事件处理程序3")
+	}
+	btn2.removeEventListener("click",f2);
+</script>
+</body>
+</html>

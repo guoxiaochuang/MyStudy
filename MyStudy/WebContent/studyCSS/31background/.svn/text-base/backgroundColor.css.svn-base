@@ -1,0 +1,9 @@
+body{
+	background-color:	blue;
+	background-image:	url("backgroundImage1.jpg");
+}
+p {
+	width:	150px;
+	padding:	10px;
+	background-color:	red;
+}

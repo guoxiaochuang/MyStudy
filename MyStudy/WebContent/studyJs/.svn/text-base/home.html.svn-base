@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JS首页</title>
+</head>
+<body>
+<h1>我的JavaScript</h1>
+<table border="1">
+<!-- 
+<tr>
+		<td align="middle">1</td>
+		<td></td>
+		<td><a href="js1/tiaoJianYuJu.html"></a></td>
+		<td>
+		</td>
+	</tr>
+-->
+	<tr>
+		<th>列号</th>
+		<th>名称</th>
+		<th>链接文件</th>
+		<th>简介</th>
+		<th>说明</th>
+	</tr>
+	<tr>
+		<td align="middle">1</td>
+		<td>JS运算符的学习</td>
+		<td><a href="js1/yunSuanfu.html">yunSuanfu.html</a></td>
+		<td>
+			<textarea id="memo" cols="80" rows="5" align="left" wrap="hard" readonly >1、算术运算符：+ - * /,%(取余) ++(自增) --自减
+2、赋值运算符：=、+=、-=*=、/=、%=
+3、字符串操作：
+4、比较运算符：==、===、!=、!==、>、<、>=、<=
+5、逻辑运算符：&&、||、!
+6、条件运算符：例如:x<10?"x比10小":"x比10大"</textarea>
+		</td>
+		<td>
+		</td>
+	</tr>
+	<tr>
+		<td align="middle">2</td>
+		<td>JS条件语句if...else</td>
+		<td><a href="js1/tiaoJianYuJu.html">tiaoJianYuJu.html</a></td>
+		<td>
+			<textarea id="memo" cols="80" rows="5" align="left" wrap="hard" readonly >1、条件语句：
+	1.2、if...else...
+	1.2、switch
+2、循环语句：
+	2.1、for循环，for/in
+	2.2、while循环，do...while...
+3、跳转语句：
+	3.1、break
+	3.2、continue</textarea>
+		</td>
+		<td>
+		</td>
+	</tr>
+	<tr>
+		<td rowspan="4" align="middle">3</td>
+		<td rowspan="4">JS函数</td>
+		<td><a href="js1/hanShu.html">hanShu.html</a></td>
+		<td>
+			<textarea id="memo" cols="80" rows="5" align="left" wrap="hard" readonly >函数：是由事件驱动 或者当它被调用时执行的 可重复使用的 代码块</textarea>
+		</td>
+		<td>
+		</td>
+	</tr>
+	<tr>
+		<td>函数调用：<br/><a href="js1/hanShuDiaoYong.html">hanShuDiaoYong.html</a></td>
+		<td>
+			<textarea id="memo" cols="80" rows="5" align="left" wrap="hard" readonly />1、函数调用：函数定义好后，不能自动执行，需要进行调用
+2、调用方式：
+	2.1、在&ltscript&gt标签内调用
+	2.2、在HTML文件中调用</textarea>
+		</td>
+		<td>
+		</td>
+	</tr>
+	<tr>
+		<td>带参数的函数：<br/><a href="js1/hanShuAndCanShu.html">hanShuAndCanShu.html</a></td>
+		<td>
+			<textarea id="memo" cols="80" rows="5" align="left" wrap="hard" readonly />1、在函数的调用中，也可以传递值，这些值被称为参数
+2、参数的个数可以为任意多个，每个参数通过,隔开
+3、注意：参数在传递时，顺序必须一致</textarea>
+		</td>
+		<td>
+		</td>
+	</tr>
+	<tr>
+		<td>带返回值的函数：<br/><a href="js1/hanShuAndFanHuiZhi.html">hanShuAndFanHuiZhi.html</a></td>
+		<td>
+			<textarea id="memo" cols="80" rows="5" align="left" wrap="hard" readonly />1、返回值：有时，我们需要将函数的值返回给调用它的地方
+	通过return语句实现
+	注意：在使用return语句时，函数会停止执行，同时返回值</textarea>
+		</td>
+		<td>
+		</td>
+	</tr>
+	<tr>
+		<td align="middle">4</td>
+		<td>JS局部变量和全局变量</td>
+		<td><a href="js1/bianliang.html">bianliang.html</a></td>
+		<td>
+			<textarea id="memo" cols="80" rows="5" align="left" wrap="hard" readonly >局部变量	只能在当前函数内使用
+全局变量	任何地方都可以使用</textarea>
+		</td>
+		<td>
+		</td>
+	</tr>
+	<tr>
+		<td align="middle">5</td>
+		<td>JS异常捕获</td>
+		<td><a href="js1/yiChang.html">yiChang.html</a></td>
+		<td>
+			<button onclick="setImg('yiChangBuHuo')">缩放图片</button><br/>
+			<img id='yiChangBuHuo' name='yiChangBuHuo' src="../images/yiChangBuHuo.jpg" width="100" height="50"/><br/>
+		</td>
+		<td>
+		</td>
+	</tr>
+	<tr>
+		<td align="middle">6</td>
+		<td>JS事件</td>
+		<td><a href="js1/shiJian.html">shiJian.html</a></td>
+		<td>
+			<button onclick="setImg('JSchangJianShiJian')">缩放图片</button><br/>
+			<img id='JSchangJianShiJian' name='JSchangJianShiJian' src="../images/JSimages/JSchangJianShiJian.jpg" width="100" height="50"/><br/>
+		</td>
+		<td>
+		</td>
+	</tr>
+	<tr>
+		<td align="middle">7</td>
+		<td>JS DOM对象</td>
+		<td><a href="js2/dom.html">dom.html</a><br/>
+		DOM操作css<br/><a href="js2/domOperaCss.html">dom.html</a></td>
+		<td>
+			DOM简介<button onclick="setImg('JSdom1')">缩放图片</button><br/>
+			<img id='JSdom1' name='JSdom1' src="../images/JSimages/JSdom1.jpg" width="100" height="50"/><br/>
+			DOM操作HTML<button onclick="setImg('JSdom2')">缩放图片</button><br/>
+			<img id='JSdom2' name='JSdom2' src="../images/JSimages/JSdom2.jpg" width="100" height="50"/><br/>
+			DOM操作HTML<button onclick="setImg('JSdom3')">缩放图片</button><br/>
+			<img id='JSdom3' name='JSdom3' src="../images/JSimages/JSdomOperaHTML.jpg" width="100" height="50"/><br/>
+			DOM句柄<button onclick="setImg('JSdom4')">缩放图片</button><br/>
+			<img id='JSdom4' name='JSdom4' src="../images/JSimages/JSdomaddEventListener.jpg" width="100" height="50"/><br/>
+		</td>
+		<td>
+		</td>
+	</tr>
+	<tr>
+		<td align="middle">8</td>
+		<td>JS事件流</td>
+		<td></td>
+		<td>
+			JS事件流<button onclick="setImg('JSshiJianLiu')">缩放图片</button><br/>
+			<img id='JSshiJianLiu' name='JSshiJianLiu' src="../images/JSimages/JSshiJianLiu.jpg" width="100" height="50"/><br/>
+		</td>
+		<td>
+		</td>
+	</tr>
+	<tr>
+		<td align="middle">9</td>
+		<td>JS事件处理</td>
+		<td><a href="js2/shiJianChuLi.html">shiJianChuLi.html</a></td>
+		<td>
+			JS事件处理<button onclick="setImg('JSshiJianChuLi')">缩放图片</button><br/>
+			<img id='JSshiJianChuLi' name='JSshiJianChuLi' src="../images/JSimages/JSshiJianChuLi.jpg" width="100" height="50"/><br/>
+		</td>
+		<td>
+		</td>
+	</tr>
+	<tr>
+		<td align="middle">10</td>
+		<td>JS事件对象</td>
+		<td><a href="js2/shiJianDuiXiang.html">shiJianDuiXiang.html</a></td>
+		<td>
+			JS事件对象<button onclick="setImg('JSshiJianDuiXiang')">缩放图片</button><br/>
+			<img id='JSshiJianDuiXiang' name='JSshiJianDuiXiang' src="../images/JSimages/JSshiJianDuiXiang.jpg" width="100" height="50"/><br/>
+		</td>
+		<td>
+		</td>
+	</tr>
+	<tr>
+		<td align="middle">11</td>
+		<td>JS内置对象</td>
+		<td>
+			内置对象：<br/>
+			<a href="js2/neiZhiDuiXiang.html">neiZhiDuiXiang.html</a><br/>
+			String对象：<br/>
+			<a href="js2/duiXiangString.html">duiXiangString.html</a><br/>
+			Data对象：<br/>
+			<a href="js2/duiXiangDate.html">duiXiangDate.html</a><br/>
+			Array对象：<br/>
+			<a href="js2/duiXiangArray.html">duiXiangArray.html</a><br/>
+			Math对象：<br/>
+			<a href="js2/duiXiangMath.html">duiXiangMath.html</a><br/>
+		</td>
+		<td>
+			JS内置对象<button onclick="setImg('JSneiZhiDuiXiang')">缩放图片</button><br/>
+			<img id='JSneiZhiDuiXiang' name='JSneiZhiDuiXiang' src="../images/JSimages/JSneiZhiDuiXiang.jpg" width="100" height="50"/><br/>
+			JS对象<button onclick="setImg('JSduiXiangJianJie')">缩放图片</button><br/>
+			<img id='JSduiXiangJianJie' name='JSduiXiangJianJie' src="../images/JSimages/JSduiXiangJianJie.jpg" width="100" height="50"/><br/>
+			JS String对象<button onclick="setImg('JSduiXiangString')">缩放图片</button><br/>
+			<img id='JSduiXiangString' name='JSduiXiangString' src="../images/JSimages/JSduiXiangString.jpg" width="100" height="50"/><br/>
+			JS Date对象<button onclick="setImg('JSduiXiangDate')">缩放图片</button><br/>
+			<img id='JSduiXiangDate' name='JSduiXiangDate' src="../images/JSimages/JSduiXiangDate.jpg" width="100" height="50"/><br/>
+			JS 数组Array对象<button onclick="setImg('JSduiXiangArray')">缩放图片</button><br/>
+			<img id='JSduiXiangArray' name='JSduiXiangArray' src="../images/JSimages/JSduiXiangArray.jpg" width="100" height="50"/><br/>
+			JS Math对象<button onclick="setImg('JSduiXiangMath')">缩放图片</button><br/>
+			<img id='JSduiXiangMath' name='JSduiXiangMath' src="../images/JSimages/JSduiXiangMath.jpg" width="100" height="50"/><br/>
+			
+		</td>
+		<td>
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="middle">11</td>
+		<td>JS DOM对象操作HTML</td>
+		<td>
+			JS DOM对象操作HTML：<br/>
+			<a href="js3/domOperaHtml.html">domOperaHtml.html</a><br/>
+		</td>
+		<td>
+			JS内置对象<button onclick="setImg('JSoperaHtml')">缩放图片</button><br/>
+			<img id='JSoperaHtml' name='JSoperaHtml' src="../images/JSimages/JSoperaHtml.jpg" width="100" height="50"/><br/>
+		</td>
+		<td>
+		</td>
+	</tr>
+	
+	<!-- 
+	<tr>
+		<td align="middle">11</td>
+		<td>JS内置对象</td>
+		<td>
+			内置对象：<br/>
+			<a href="js2/neiZhiDuiXiang.html">neiZhiDuiXiang.html</a><br/>
+		</td>
+		<td>
+			JS内置对象<button onclick="setImg('JSneiZhiDuiXiang')">缩放图片</button><br/>
+			<img id='JSneiZhiDuiXiang' name='JSneiZhiDuiXiang' src="../images/JSimages/JSneiZhiDuiXiang.jpg" width="100" height="50"/><br/>
+		</td>
+		<td>
+		</td>
+	</tr>
+	 -->
+	<tr>
+		<td align="middle">8</td>
+		<td>JS JSON对象</td>
+		<td><a href="js2/doJson.html">doJson.html</a></td>
+		<td>
+		</td>
+		<td>
+		</td>
+	</tr>
+</table>
+<script type="text/javascript">
+	var flag = true;
+	function setImg(img){
+		var obj = document.getElementById(img);
+		if(flag){
+			obj.width = 700;
+			obj.height = 400;
+		} else {
+			obj.width = 100;
+			obj.height = 50;
+		}
+		flag = !flag;
+	}
+</script>
+</body>
+</html>

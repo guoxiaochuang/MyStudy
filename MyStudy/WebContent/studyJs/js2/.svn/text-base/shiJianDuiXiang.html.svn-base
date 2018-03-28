@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>事件对象</title>
+</head>
+<body>
+<div id="div1">
+	<h2>事件对象</h2>
+	<button id="btn1">点我</button>
+	<a href="http://www.baidu.com" id="a1">百度</a>
+</div>
+	<script>
+		var btn1 = document.getElementById("btn1");
+		btn1.addEventListener("click",f1);
+		var div1 = document.getElementById("div1");
+		div1.addEventListener("click",f2);//事件冒泡
+		document.getElementById("a1").addEventListener("click",f3);		
+		function f1(event){
+			alert(event.type);
+			alert(event.target);
+			event.stopPropagation();//阻止事件冒泡
+		}
+		function f2(event){
+			alert("div");
+		}
+		function f3(event){
+			event.stopPropagation();//阻止事件冒泡
+			event.preventDefault();//阻止默认事件
+		}
+	</script>
+</body>
+</html>

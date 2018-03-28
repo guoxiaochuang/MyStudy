@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>属性选择器</title>
+<link type="text/css" rel="stylesheet" href="../CSS/selector.css">
+</head>
+<body>
+	<p><strong>p标签Hello CSS</strong></p>
+	<ul>
+		<li><strong>li标签Hello CSS</strong></li>
+	</ul>
+</body>
+</html>

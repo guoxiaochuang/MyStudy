@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JS DATA对象</title>
+</head>
+<body onload="startTime()">
+<h2>JS DATA对象</h2>
+时钟：
+<div id="div1">
+	
+</div>
+<hr>
+<script type="text/javascript">
+	var date = new Date();
+	document.write(date);
+	document.write("<br/>");
+	
+	document.write(date.getFullYear());
+	document.write("<br/>");
+	
+	document.write(date.getTime());
+	document.write("<br/>");
+	
+	date.setFullYear(2011,1,1);
+	document.write(date);
+	document.write("<hr>");
+	//时钟
+	function startTime(){
+		var today = new Date();
+		var h = today.getHours();
+		var m = today.getMinutes();
+		var s = today.getSeconds()
+		m = checkTime(m);
+		s = checkTime(s);
+		document.getElementById("div1").innerHTML = h + ":" + m + ":" + s;
+		setTimeout(function(){
+			startTime();
+		},1000)
+	}
+	function checkTime(i){
+		if(i<10){
+			i = "0" + i;
+		}
+		return i;
+	}
+</script>
+</body>
+</html>

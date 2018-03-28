@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>带参数的函数</title>
+</head>
+<script>
+	function demo(name,age){
+		alert('你好：'+name+'，你的年龄是：'+age);
+	}
+</script>
+<body>
+<h2>带参数的函数</h2>
+<button onclick="demo('iee',20)">按钮1</button>
+<button onclick="demo('itt',30)">按钮2</button>
+</body>
+</html>

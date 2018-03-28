@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>DOM 操作HTML</title>
+</head>
+<body>
+<h2>DOM 操作HTML</h2>
+<p name="p1">hello</p>
+<p name="p1">hello</p>
+<p name="p1">hello</p>
+<p name="p1">hello</p>
+<p name="p1">hello</p>
+<a id="a1" href="" title="得到a标签的属性">hello</a><br/>
+<a id="a2" href="">world</a><br/>
+<ul><li>1</li><li>2</li><li>3</li></ul>
+<hr>
+<script type="text/javascript">
+	//获取name
+	var counts = document.getElementsByName("p1");
+	document.write(counts.length+"<br/>");
+	var p = counts[3];
+	p.innerHTML = "world ddd";
+	
+	//获取元素
+	var counts2 = document.getElementsByTagName("p");
+	document.write(counts2.length+"<br/>");
+	var p2 = counts2[2];
+	p2.innerHTML = "world";
+	
+	//获取元素属性
+	function getAttr(){
+		var anode = document.getElementById("a1");
+		var attr = anode.getAttribute("id");
+		document.write(attr+"<br/>");
+	}
+	getAttr();
+	
+	//设置元素属性
+	function setAttr(){
+		var anode = document.getElementById("a2");
+		anode.setAttribute("title","动态设置标签属性");
+		var attr = anode.getAttribute("title");
+		document.write(attr+"<br/>");
+	}
+	setAttr();
+	
+	//访问子节点
+	function getChildNode(){
+		var childNodes = document.getElementsByTagName("ul")[0].childNodes;
+		document.write(childNodes.length+"<br/>");
+	}
+	getChildNode();
+	
+	
+</script>
+</body>
+</html>

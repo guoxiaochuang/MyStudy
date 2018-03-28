@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JS操作JSON</title>
+</head>
+<body>
+<button onclick="f1()">操作JSON对象</button>
+<button onclick="f2()">操作JSON数组</button>
+<button onclick="f3()">操作JSON数组（for循环）</button>
+<button onclick="f4()">将两个JSON对象组装到一个里面</button>
+<script>
+
+	var o = {name:'a',age:22};
+	var packJson = [{"name":"nikita", "password":"1111"}, {"name":"tony", "password":"2222"}];
+	
+	function f1(){
+		for( var p in o){
+			alert(p+ ":"+ o[p]);
+		}
+	}
+	function f2(){
+		for( var p in packJson){//遍历json数组时，这么写p为索引，0,1
+			for(var q in packJson[p]){
+				alert(q+ ":"+ packJson[p][q]);
+			}
+			//alert(packJson[p].name + ":" + packJson[p].password);
+		}
+	}
+	function f3(){
+		for(var i = 0; i < packJson.length; i++){
+			alert(packJson[i].name + " " + packJson[i].password);
+		}
+	}
+	var json1 = {"name":"nikita"};
+	var json2 = {"password":"1111"};
+	function f4(){
+	    if(json1 && json2){
+	       for(var p in json2){
+	    	   json1[p] = json2[p];
+	       }
+	    }
+	    for( var p in json1){
+			alert(p+ ":"+ json1[p]);
+		}
+	    alert(json2.toString()+":"+json1.toString());
+	    for( var p in json2){
+			alert(p+ ":"+ json2[p]);
+		}
+	}
+	addGroupJson(json1, json2);
+	function addGroupJson(targetJson, packJson){
+	    if(targetJson && packJson){
+	       for(var p in packJson){
+	           targetJson[p] = packJson[p];
+	       }
+	    }
+	}
+</script>
+</body>
+</html>

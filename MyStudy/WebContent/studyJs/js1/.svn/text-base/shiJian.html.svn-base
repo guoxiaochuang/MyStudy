@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JS事件</title>
+<link rel="stylesheet" type="text/css" href="../../css/myStyle.css">
+</head>
+<body onLoad="mgs()">
+<!-- onLoad="mgs()" onUnload="unmgs()" -->
+<h2>JS事件</h2>
+<p>事件：onmouseover（鼠标经过事件）和onmouseout（鼠标移出）</p>
+<div class='div' onmouseover="onOver(this)" onmouseout="onOut(this)"></div>
+<p>事件：onChange（文本内容个改变）</p>
+<form >
+	<input type="text" onChange="changeDemo()"></input><br/>
+	<input type="text" onChange="alert('内容变化了')"></input>
+</form>
+<p>事件：onSelect（文本框选中事件）</p>
+<form >
+	<input type="text" onSelect="onSelect(this)"></input><br/>
+</form>
+<p>事件：onFocus（光标聚集事件）和onBlur（光标移开事件）</p>
+<form >
+	<input type="text" onFocus="onFocus(this)" onBlur="onBlur(this)"></input><br/>
+</form>
+<p>事件：onLoad（网页加载事件）和onUnload（关闭网页事件）</p>
+<form >
+	<input type="text" onFocus="onFocus(this)" onBlur="onBlur(this)"></input><br/>
+</form>
+<script>
+	function onOver(ooj){
+		ooj.innerHTML = 'hello';
+	}
+	function onOut(ooj){
+		ooj.innerHTML = 'world';
+	}
+	function changeDemo(){
+		alert("输入内容改变了");
+	}
+	function onSelect(t){
+		t.style.background = "red";
+	}
+	function onFocus(t){
+		t.style.background = "blue";
+	}
+	function onBlur(t){
+		t.style.background = "green";
+	}
+	function mgs(){
+		alert("打开网页");
+	}
+	function unmgs(){
+		alert("关闭网页");
+	}
+</script>
+</body>
+</html>

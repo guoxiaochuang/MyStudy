@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>WebStorage详细说明</title>
+</head>
+<body>
+<h2>WebStorage详细说明</h2>
+WebStorage是HTML5中本地存储的解决方案之一，<br/>
+在HTML5的WebStorage概念引入之前除去IE User Data、Flash Cookie、Google Gears等看名字就不靠谱的解决方案，浏览器兼容的本地存储方案只有使用cookie。有同学可能会问，既然有了cookie本地存储，为什么还要引入WebStorage的概念？<br/>
+Cookie肿么了<br/>
+cookie的缺陷是非常明显的<br/>
+1. 数据大小：作为存储容器，cookie的大小限制在4KB左右这是非常坑爹的，尤其对于现在复杂的业务逻辑需求，4KB的容量除了存储一些配置字段还简单单值信息，对于绝大部分开发者来说真的不知指望什么了。<br/>
+2. 安全性问题：由于在HTTP请求中的cookie是明文传递的（HTTPS不是），带来的安全性问题还是很大的。<br/>
+3. 网络负担：我们知道cookie会被附加在每个HTTP请求中，在HttpRequest 和HttpResponse的header中都是要被传输的，所以无形中增加了一些不必要的流量损失。<br/>
+WebStorage<br/>
+WebStorage是HTML新增的本地存储解决方案之一，但并不是为了取代cookie而制定的标准，cookie作为HTTP协议的一部分用来处理客户端和服务器通信是不可或缺的，session正是依赖于实现的客户端状态保持。WebStorage的意图在于解决本来不应该cookie做，却不得不用cookie的本地存储。<br/>
+WebStorage提供两种类型的API：localStorage和sessionStorage，两者的区别看名字就有大概了解，localStorage在本地永久性存储数据，除非显式将其删除或清空，sessionStorage存储的数据只在会话期间有效，关闭浏览器则自动删除。两个对象都有共同的API。
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>String对象</title>
+</head>
+<body>
+<h2>String对象</h2>
+indexOf：在字符串中查找字符串。如果存在，返回字符串位置；如果不存在，返回-1<br/>
+match：内容匹配<br/>
+replace：更换内容<br/>
+toUpperCase()/toLowerCase：大小写转换<br/>
+split：把字符串分割成数组 <br/>
+<hr>
+<script>
+	var str = "Hello World";
+	//document.write(str.length);
+	//document.write(str.indexOf("Hello"));
+	//document.write(str.match("Hello"));
+	//str = str.replace("World","ZhongGuo");
+	//document.write(str);
+	
+	var str1 = "hello,world,zhongguo";
+	var s = str1.split(",");
+	document.write(s[1]);
+</script>
+
+</body>
+</html>

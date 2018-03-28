@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>WebStorage</title>
+</head>
+<script src="webStorage.js"></script>
+<!-- 
+<script type="text/javascript">
+function saveStorage(id){
+	var a = document.getElementById(id);
+	var str = a.value;
+	sessionStorage.setItem('message',str);
+}
+function getStorage(id){
+	var message = sessionStorage.getItem('message');
+	var a = document.getElementById(id);
+	a.value = message;
+} -->
+</script>
+<body>
+	<h2>WebStorage</h2>
+	<p>sessionStorage练习</p>
+	输入数据：<input type="text" id="input1"></input><br/>
+	读取数据：<input type="text" id="input2" readonly></input><br/>
+	<input type="button" name="name1" onclick="saveStorage('input1')" value="保存数据"></input>
+	<input type="button" name="name2" onclick="getStorage('input2')" value="读取数据"></input>
+	<input type="button" name="name3" onclick="cleanInput('input1'),cleanInput('input2')" value="清除数据"></input>
+	
+	<p>localStorage练习</p>
+	输入数据：<input type="text" id="input3"></input><br/>
+	读取数据：<input type="text" id="input4" readonly></input><br/>
+	<input type="button" name="name4" onclick="saveStorage2('input3')" value="保存数据"></input>
+	<input type="button" name="name5" onclick="getStorage2('input4')" value="读取数据"></input>
+	<input type="button" name="name6" onclick="cleanInput2('input3'),cleanInput2('input4')" value="清除数据"></input>
+</body>
+</html>

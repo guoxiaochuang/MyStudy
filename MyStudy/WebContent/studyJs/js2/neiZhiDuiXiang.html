@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>内置对象</title>
+</head>
+<body>
+<h2>JS内置对象</h2>
+
+<script type="text/javascript">
+	//创建对象
+	people = new Object();
+	people.name = "gg";
+	people.age = 22;
+	document.write("name:"+people.name+","+"age:"+people.age);
+	document.write("<br/>");
+	
+	people2 = {name:"hh",age:30};
+	document.write("name:"+people2.name+","+"age:"+people2.age);
+	document.write("<br/>");
+	
+	//使用函数创建对象
+	function peopleF(name,age){
+		this._name = name;
+		this._age = age;
+	}
+	people3 = new peopleF("aa",44);
+	document.write("name:"+people3._name+","+"age:"+people3._age);
+</script>
+</body>
+</html>

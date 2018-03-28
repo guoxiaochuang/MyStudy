@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>运算符</title>
+<script>
+	function getSum(){
+		var i=10;
+		var j=10;
+		var n = i+j;
+		document.getElementById("pid").innerHTML = n;
+	}
+	function getSum2(){
+		var i=10;
+		var j='10';
+		var n = i+j;
+		document.getElementById("pid2").innerHTML = n;
+	}
+</script>
+</head>
+<body>
+<h2>运算符</h2>
+<p>i=10,j=10,i+j=?</p>
+<p id="pid"></p>
+<input type="submit" value="提交" onclick="getSum()"></input>
+<p>字符串操作：会做拼接操作</p>
+<p>(int类型) i=10, (字符串类型)j="10",i+j=?</p>
+<p id="pid2"></p>
+<input type="submit" value="提交2" onclick="getSum2()"></input>
+</body>
+</html>

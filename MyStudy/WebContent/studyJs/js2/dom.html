@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JS DOM对象</title>
+</head>
+<body>
+<h2>JS DOM对象</h2>
+<p id="pid">Hello</p>
+<button onclick="f1()">按钮</button>
+<script type="text/javascript">
+	//改变HTML输出流
+	document.write("hello");
+	
+	function f1(){
+		document.getElementById("pid").innerHTML = 'World';
+	}
+</script>
+</body>
+</html>

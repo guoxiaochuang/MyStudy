@@ -1,0 +1,7 @@
+body{
+	background-image:	url("backgroundImage1.jpg");
+	background-repeat:	no-repeat;/*repeat-x,repeat-y,no-repeat*/
+	background-position: 100px 100px;/*right和center*/
+	background-attachment:	fixed;/*背景图片是否跟随滚动*/
+	background-size:	100px 100px;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>WebStorage</title>
+</head>
+<script src="webStorage.js"></script>
+<script type="text/javascript">
+function saveStorage(id){
+	alert(111);
+	var dw = document.getElementById('dw');
+	var table = document.getElementById("tabEquipment");
+	var row = table.insertRow(4);
+	var cell0 = row.insertCell(0);
+	 cell0.innerHTML = "<input type='checkbox' name='checkbox1' value='checkbox'>";
+	 var cell1 = row.insertCell(1);
+	 cell1.innerHTML = "<input type='text' name='fname' />";
+	  var cell2 = row.insertCell(2);
+	      cell2.innerHTML = "<input type='text' name='fname' />";
+	       var cell3 = row.insertCell(3);
+	       cell3.innerHTML = "<input type='checkbox' />PO " +
+	                         "<input type='checkbox' />PO Update " +
+	                         "<input type='checkbox' />ASN " +
+	                         "<input type='checkbox' />Receiver ";
+}
+
+</script>
+<body>
+	<h2>web</h2>
+	<input type="button" name="name1" onclick="saveStorage('input1')" value="保存数据"></input>
+	<div id="dw">
+		<table id="tabEquipment" name="tabEquipment" width="100%" border="1">
+					  <tr>
+					    <th>名称</th>
+					    <th>信息</th>
+					    <th>行数</th>
+					    <th>列数</th>
+					    <th>操作</th>
+					  </tr>
+					  <tr>
+					    <td>设备</td>
+					    <td>这是纤芯</td>
+					    <td>
+					    	
+					    </td>
+					    <td>
+					    	
+					    </td>
+					    <td>
+					    	 
+					    </td>
+					  </tr>
+					</table>
+	</div>
+</body>
+</html>
