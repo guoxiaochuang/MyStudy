@@ -1,14 +1,6 @@
 package com.guo.aDemo;
 
-import java.text.DateFormat;
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.Locale;
-
-import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONArray;
 
 public class MyTest {
 	private final int num = 4;
@@ -31,8 +23,8 @@ public class MyTest {
 			System.out.println(i);
 			String cuid = cuids[i];
 			whereSql += "'" + cuid + "',";
-			if (((i+1) % 4 == 0) || i==cuids.length-1) {
-				whereSql = whereSql.substring(0, whereSql.length()-1) + ")";
+			if (((i + 1) % 4 == 0) || i == cuids.length - 1) {
+				whereSql = whereSql.substring(0, whereSql.length() - 1) + ")";
 				System.out.println(whereSql);
 				whereSql = "(";
 			}

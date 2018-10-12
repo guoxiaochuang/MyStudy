@@ -1,12 +1,9 @@
 package com.test;
 
+import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
-
-import com.mysql.jdbc.Connection;
-import com.mysql.jdbc.Statement;
-
-import oracle.jdbc.driver.OracleDriver;
+import java.sql.Statement;
 public class OuterClass {
 	
 	String url = "";

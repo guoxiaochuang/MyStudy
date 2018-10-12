@@ -1,7 +1,5 @@
 package com.test;
 
-import net.bull.javamelody.Main;
-
 public class MyTest {
 
 	public static String f1(){
