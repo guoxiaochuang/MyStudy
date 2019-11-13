@@ -1,6 +1,8 @@
 package com.guo.String;
 
 import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
 
 public class StringUtil {
 	/**
@@ -19,12 +21,15 @@ public class StringUtil {
 		cuids[8] = "008";
 		cuids[9] = "009";
 		cuids[10] = "010";
+		
+		int flag = 3;
+		
 		String whereSql = "(";
 		for (int i = 0; i < cuids.length; i++) {
 			System.out.println(i);
 			String cuid = cuids[i];
 			whereSql += "'" + cuid + "',";
-			if (((i+1) % 4 == 0) || i==cuids.length-1) {
+			if (((i+1) % flag == 0) || i==cuids.length-1) {
 				whereSql = whereSql.substring(0, whereSql.length()-1) + ")";
 				System.out.println(whereSql);
 				whereSql = "(";
@@ -35,6 +40,47 @@ public class StringUtil {
 	public static void f2(){
 		String cuid = "FIBER_CAB-001";
 		System.out.println(cuid.split("-")[0]);
+	}
+	
+	public static void f3(){
+		List<String> list = new ArrayList<String>();
+		for (int i = 0; i < 10; i++) {
+			list.add("tt" + i);
+		}
+		
+		int flag = 10; // 每次取的数据
+		int size = list.size(); // 总条数
+		int temp = size/flag + 1; // 总共分多少组
+		boolean special = size%flag ==0; // 最后一组是否有数据
+		
+		System.out.println("共条数："+ size
+				+";多少组："+temp
+				+";每组条数：" +flag
+				+";最后一组是否满员："+!special);
+		String sql = "";
+		List<String> subList = null;
+		if(size>0){
+			for(int i=0; i< temp; i++){
+				if(i == temp -1){
+					if(special){
+						break;
+					}
+					subList = list.subList(flag * i, size);
+				} else {
+					subList = list.subList(flag * i, flag * (i + 1));
+				}
+				sql += " work_id in (";
+				for(int j=0; j<subList.size(); j++){
+					sql += " '" + subList.get(j) + "',";
+				}
+				sql = sql.substring(0, sql.length()-1);
+				sql += " ) or";
+			}
+			sql = sql.substring(0, sql.length()-2);
+		} else {
+			sql = " 1=2 ";
+		}
+		System.out.println(sql);
 	}
 	
 	public static void main(String[] args) {
@@ -48,6 +94,6 @@ public class StringUtil {
 //		int end = fileName2.lastIndexOf('.');
 //		String fileName3 = fileName2.substring(start+1, fileName2.length());
 //		System.out.println(fileName3);
-		f2();
+		f3();
 	}
 }

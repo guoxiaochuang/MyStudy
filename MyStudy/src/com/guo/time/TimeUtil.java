@@ -72,7 +72,29 @@ public class TimeUtil {
 //		Calendar cal=Calendar.getInstance();  
 //		cal.setTime(date);  
 	}
-	public static void main(String[] args) {
+	public static void f3(){
+		Date now = new Date();
+//		DateFormat df = new SimpleDateFormat("yyyyMMddHHmmss");
+//		df.format(now);
+//		System.out.println(df.format(now));
+		TimeFormatHelper.getFormatDate(now, TimeFormatHelper.TIME_FORMAT_A);
+		System.out.println("333--"+TimeFormatHelper.getFormatDate(now, TimeFormatHelper.TIME_FORMAT_B));
 		
+		String dateStr = "2019-03-05 01:01:01";
+		Date date = TimeFormatHelper.convertDate(dateStr);
+		System.out.println("2222----"+date);
+		
+		String dateStr2 = "adf";
+//		TimeFormatHelper.checkIsDate(dateStr2);
+		System.out.println("4--"+TimeFormatHelper.checkIsDate(dateStr2));
+
+		System.out.println("---------------");
+		
+		TimeFormatHelper.getFormatTimestamp(dateStr);
+		System.out.println("5-"+TimeFormatHelper.getFormatTimestamp(dateStr).toString());
+		
+	}
+	public static void main(String[] args) {
+		f3();
 	}
 }
