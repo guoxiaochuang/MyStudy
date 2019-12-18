@@ -4,7 +4,7 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-public class StringUtil {
+public class StringDemo {
 	/**
 	 * 组织sql，多条信息，防止sql过长，每N条数据整理一次条件进行查询
 	 */
@@ -83,6 +83,33 @@ public class StringUtil {
 		System.out.println(sql);
 	}
 	
+
+	public static void f6() {
+
+		int num = 10;
+		List<String> ll = new ArrayList<String>();
+		for (int i = 0; i < 125; i++) {
+			ll.add("tt" + i);
+		}
+
+		int listSize = ll.size();
+		int groupByNum = 10;
+		int toIndex = groupByNum;
+		for (int i = 0; i < ll.size(); i += groupByNum) {
+			System.out.println("i----" + i);
+			String intIds = "";
+			if (i + groupByNum > listSize) { // 作用为toIndex最后没有100条数据则剩余几条newList中就装几条
+				toIndex = listSize - i;
+			}
+			List<String> newList = ll.subList(i, i + toIndex);
+			for(String nn:newList){
+				intIds += nn + ",";
+			}
+			intIds = intIds.substring(0, intIds.length()-1);
+			System.out.println(intIds);
+		}
+	}
+	
 	public static void main(String[] args) {
 //		String fileName = "T_SUGGESTION-4028820853322e660153322e66470000.zip";
 //		String name = fileName.substring( 0, fileName.indexOf('.'));
@@ -96,4 +123,5 @@ public class StringUtil {
 //		System.out.println(fileName3);
 		f3();
 	}
+	
 }
