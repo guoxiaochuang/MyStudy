@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <!--家客-测试环境-->
+    <system name="jiake">
+        <webService>
+            <url>http://10.217.4.65:8081/nais/webService/inasProxy?wsdl</url>
+            <methodName>process</methodName>
+            <parameterSql>select role_id,role_name from TAW_ROLE</parameterSql>
+            <sendInterval></sendInterval>
+        </webService>
+        <database>
+            <url>jdbc:oracle:thin:@10.96.30.171:1521:inasdb</url>
+            <user>inas</user>
+            <password>Inas_2014</password>
+        </database>
+    </system>
+
+    <!--集客-测试环境-->
+    <!-- <system name="jike">
+        <webService>
+            <url>http://10.217.4.65:8081/nais/webService/inasProxy?wsdl </url>
+            <methodName>process</methodName>
+            <parameterSql>
+                <![CDATA[
+                select svc_call,msgtype, msgbody from sheet a where a.sheet_code = '#{sheet_code}'
+                ]]>
+            </parameterSql>
+            <sendInterval></sendInterval>
+        </webService>
+        <database>
+            <url>jdbc:oracle:thin:@10.96.30.171:1521:inasdb</url>
+            <user>inas</user>
+            <password>Inas_2014</password>
+        </database>
+    </system> -->
+</config>
